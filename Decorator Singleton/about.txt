@@ -1,0 +1,27 @@
+About This Code
+================
+
+This Python code showcases the implementation of the Singleton design pattern using a decorator. The Singleton pattern ensures that a class has only one instance, and it provides a global point of access to that instance. In this approach, a decorator is used to enforce the Singleton behavior.
+
+1. Singleton Decorator:
+-------------------------
+The code defines a decorator function named "singleton" that enforces the Singleton pattern.
+- Inside the decorator, an "instances" dictionary is used to store instances of the decorated class.
+- The "get_instance" function is returned by the decorator, which creates and returns a single instance of the class if it doesn't already exist in the "instances" dictionary.
+
+2. SingletonClass:
+-------------------
+The "SingletonClass" class represents the Singleton and has the following features:
+- The class has an optional "data" attribute that can be set during initialization.
+- It provides methods to update the "data" attribute using the "add_data" method and to retrieve the "data" using the "get_data" method.
+
+3. Example Usage:
+-------------------
+The code demonstrates how to create and use the Singleton pattern:
+- Instances of "SingletonClass" are created using the decorator, ensuring that only one instance is created.
+- Both "singleton1" and "singleton2" refer to the same instance due to the Singleton pattern, which is validated by checking if they are identical using the "is" operator.
+- The "add_data" method is used to set and modify the shared data, and the "get_data" method retrieves and prints the data.
+
+4. Explanation:
+------------------
+The Singleton pattern, implemented using a decorator, ensures that only one instance of a class is created and shared. It provides a simple and elegant way to manage a single resource or state across an application, such as a configuration manager or a global database connection.

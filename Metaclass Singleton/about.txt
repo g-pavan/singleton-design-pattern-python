@@ -1,0 +1,22 @@
+Singleton Pattern with Metaclass
+
+This code demonstrates the implementation of the Singleton pattern using a metaclass in Python. The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance.
+
+1. Metaclass Implementation:
+   - The `SingletonMeta` metaclass is defined, which is responsible for enforcing the Singleton pattern.
+   - It maintains a dictionary `_instances` to keep track of the created instances of the classes using this metaclass.
+   - The `__call__` method is overridden to control instance creation. If an instance of the class doesn't exist, it's created using the parent metaclass, and a reference to the instance is stored in `_instances`.
+
+2. Singleton Class:
+   - The `Singleton` class is defined with the metaclass set to `SingletonMeta`.
+   - It has an `__init__` method that can accept an optional `data` argument, which initializes the `data` attribute.
+   - Additional methods are provided, including `add_data` to set the `data` attribute and `get_data` to retrieve it.
+
+3. Using the Singleton:
+   - In the main part of the code, two instances, `singleton1` and `singleton2`, are created.
+   - Both instances are the same, as indicated by the `singleton1 is singleton2` check.
+   - Initially, the `data` attribute is set to `None` for both instances.
+   - Data is added to `singleton1` using the `add_data` method, and it's reflected in both instances.
+   - The `get_data` method is used to retrieve the `data` attribute.
+
+This code provides a basic implementation of the Singleton pattern using a metaclass in Python. It ensures that only one instance of the `Singleton` class is created, and that instance is accessible from multiple references.

@@ -1,0 +1,30 @@
+About This Code
+================
+
+This Python code demonstrates the Classic Singleton design pattern using a class named "ClassicSingleton." The Classic Singleton pattern ensures that there is only one instance of a class, and it provides global access to that instance.
+
+Contents:
+1. ClassicSingleton Class
+2. Example Usage
+3. Explanation
+
+1. ClassicSingleton Class:
+-------------------------
+The ClassicSingleton class implements the Classic Singleton pattern. Here's how it works:
+- The class maintains a class-level attribute "_instance," initially set to None.
+- The "__new__" method is overridden to create and return the single instance of the class. If the instance doesn't exist, it is created and stored in "_instance."
+- The "data" attribute is used to store a single data item. It is initially set to None.
+
+2. Example Usage:
+-------------------
+The code demonstrates how to create and use the Classic Singleton pattern:
+- An instance of ClassicSingleton, "singleton1," is created.
+- The "add_data" method is used to set the data to "Data 1."
+- Another instance, "singleton2," is created. However, it points to the same instance as "singleton1" due to the Classic Singleton pattern.
+- The "get_data" method is used to retrieve and print the data.
+
+3. Explanation:
+------------------
+The Classic Singleton pattern ensures that there is only one instance of the class. Both "singleton1" and "singleton2" refer to the same instance, allowing the data to be shared between them. When the "add_data" method is called on "singleton2," it updates the data for the shared instance, affecting both "singleton1" and "singleton2."
+
+This pattern is useful when you need to manage a single resource, such as a configuration manager, a connection pool, or a logger, across your application.

@@ -1,0 +1,33 @@
+singleton_with_double_lock.py:
+
+This Python code file demonstrates the implementation of a Singleton pattern with thread safety using double-checked locking. It includes the following components:
+
+SingletonWithDoubleLock Class:
+
+This class represents the Singleton pattern with thread safety. It ensures that only one instance of the class is created.
+The __new__ method is overridden to create and return the single instance of the class with double-checked locking.
+The add_data method allows you to add data to the Singleton instance.
+The get_data method retrieves and returns data from the Singleton instance.
+Example Usage:
+
+In the main code block, two instances of SingletonWithDoubleLock are created.
+The code demonstrates that both instances are indeed the same, highlighting the Singleton pattern's core behavior.
+Data is added to and retrieved from both instances to confirm data sharing.
+singleton_without_double_lock.py:
+
+This Python code file demonstrates the implementation of a Singleton pattern without double-checked locking. It includes the following components:
+
+SingletonWithOutDoubleLock Class:
+
+This class represents the Singleton pattern without double-checked locking, ensuring only one instance is created.
+The __new__ method is overridden to create and return the single instance of the class.
+The add_data method allows you to add data to the Singleton instance.
+The get_data method retrieves and returns data from the Singleton instance.
+Example Usage:
+
+In the main code block, two instances of SingletonWithOutDoubleLock are created.
+The code demonstrates that both instances are indeed the same, highlighting the Singleton pattern's core behavior.
+Data is added to and retrieved from both instances to confirm data sharing.
+
+These code files illustrate the Singleton pattern, 
+with the first one implementing thread safety using double-checked locking and the second one implementing a basic Singleton without double-checked locking. The Singleton pattern ensures there is only one instance of the class and provides a global point of access to that instance.
